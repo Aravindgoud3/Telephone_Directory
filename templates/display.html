@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+
+
+
+
+{%block container%}<br><br><br>
+<table class="table table-dark table-hover" style="width:26%">
+  <tr>
+    <th class="table-light">S.No</th>
+    <th class="table-light">Name</th>
+    <th class="table-light">Phone</th>
+  </tr>
+{% for i in database%}
+<tr>
+  <td>{{ loop.index }}</td> <!-- for generating series in this td -->
+  <td>{{ i }}</td>
+  <td>{{ database[i] }}</td>
+</tr>
+{% endfor %}
+</table>
+{%endblock%}

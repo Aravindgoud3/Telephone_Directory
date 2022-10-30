@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+
+{%block container%}<br><br><br>
+<form action="{{url_for('search')}}" method="post">
+  <b style='color:#D5DBDB'>Enter a Name : </b><input type="text" name="name1">
+  <input type="submit" value="search">
+</form>
+{% endblock %}
+
+{%block header%}<br>
+<table class="table table-success table-striped" style="width:26%">
+<tr>
+  <th>Name : <b style="color:green"> {{name}}</b></th>
+  <th>Phone : <b style="color:green"> {{phone}}</b></th>
+</tr>
+
+</table>
+{%endblock%}
